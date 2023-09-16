@@ -1,9 +1,8 @@
-import Inicio from "./components/inicio";
-
+import Login from "./components/Login"
 function App() {
  return(
-  <Inicio/>
- )
+    <Login/>
+  )
 }
 
 export default App
