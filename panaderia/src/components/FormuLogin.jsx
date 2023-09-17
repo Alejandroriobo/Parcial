@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
 import axios from "axios"
@@ -6,7 +7,8 @@ import icono from '../assets/panadero.png'
 import ButtonLogin from './ButtonLogin'
 import "../styles/Login.css"
 
-const Login = () =>{
+const FormuLogin = () => {
+    
     const [usuario, setUsuario] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
@@ -37,11 +39,10 @@ const Login = () =>{
                 } else {
                     Swal.fire("Información!", "Ocurrio un error!", "error");
                 }
-            });
-        
-        
+            });  
     }
     return(
+    <form>
         <div className="main">
             <div></div>
             <div className='login'>
@@ -58,6 +59,7 @@ const Login = () =>{
                 </div>
             </div>
         </div>
+    </form>
     )
 }
-export default Login;
+export default FormuLogin;
