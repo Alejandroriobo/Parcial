@@ -29,7 +29,7 @@ const FormuLogin = () => {
                 localStorage.setItem("token", resp.data.jwt)
                 localStorage.setItem("user", resp.data.user)
                 localStorage.setItem("username", resp.data.user.usuario)
-                Swal.fire("Exito!", "Tus datos son validos!", "success");
+                // Swal.fire("Exito!", "Tus datos son validos!", "success");
                 navigate("/dashboard")
             })
             .catch((err) => {
@@ -49,7 +49,7 @@ const FormuLogin = () => {
                 <div className='encabezado'>
                     <img src={icono} alt="icono" />
                 </div>
-                <h1>Login</h1>
+                <h1>Doughjoy</h1>
                 <div className='llenar'>
                     <div><input type="text" name='username' placeholder='Username' required
                     onChange={(e)=>{setUsuario(e.target.value);}} /></div>

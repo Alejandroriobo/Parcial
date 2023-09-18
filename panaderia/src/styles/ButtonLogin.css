@@ -1,12 +1,12 @@
 button{
     width: 200px;
-    height: 70px;
+    height: 60px;
     padding: 10px;
     background: linear-gradient(to right, rgb(192, 83, 7)0%, rgb(246, 161, 27) 100% );
     border-radius: 30px;
     color: white;
 }
 button:hover{
-    background: linear-gradient(to right, #4fdbeed3 0%, #26eb71 100% );
+    background: linear-gradient(to right, #caaa40d3 0%, #e6c50c 100% );
     color: black;
 }

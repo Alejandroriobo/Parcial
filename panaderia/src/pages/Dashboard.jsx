@@ -1,8 +1,15 @@
 
 import ListaProductos from "../components/ListaProductos";
+import NavbarDashboard from "../components/NavbarDashboard";
 const Dashboard = ()=>{
     return(
-        <ListaProductos/>
+        <div>
+            <NavbarDashboard/>
+            <div>
+                <ListaProductos/>
+            </div>
+        </div>
+        
     )
 }
 export default Dashboard;

@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed:ital,wght@1,600;1,700&family=Fira+Sans:wght@100&family=Fjalla+One&family=Open+Sans:wght@300;600;800&display=swap');
 .main{
     width: 100vw;
     height: 100vh; 
@@ -21,6 +21,13 @@
     border-radius: 30px;
     flex-direction: column;
     align-items: center;
+}
+.login h1{
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Asap Condensed', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .encabezado{
     width: 100%;
