@@ -11,7 +11,6 @@ const ListaProductos = () => {
     const [data, setData] = useState([]);
     
     const handleProducto = async () => {
-        console.log(token)
         await axios
             .get("http://89.116.25.43:3500/api/productos/listar", {
                 headers: {Authorization: `bearer ${token}`},
@@ -37,7 +36,7 @@ const ListaProductos = () => {
         handleProducto();
     }, []);
     return(
-    <Container striped bordered hover >
+    <Container>
       <Row>
         {data.map((result) => (
           <Col key={result._id} >
