@@ -36,9 +36,10 @@ const ListaProductos = () => {
     useEffect(() => {
         handleProducto();
     }, []);
-    return(<Container striped bordered hover >
+    return(
+    <Container striped bordered hover >
       <Row>
-        {data.map((result, index) => (
+        {data.map((result) => (
           <Col key={result._id} >
             <Card style={{ width: "18rem" }} className="grid hover-card">
               <Card.Img className="imgpan" variant="top" src={result.imagen} alt={result.nombre} />
