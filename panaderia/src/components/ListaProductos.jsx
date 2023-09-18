@@ -38,7 +38,7 @@ const ListaProductos = () => {
     }, []);
     return(<Container striped bordered hover >
       <Row>
-        {data.map((result) => (
+        {data.map((result, index) => (
           <Col key={result._id} >
             <Card style={{ width: "18rem" }} className="grid hover-card">
               <Card.Img className="imgpan" variant="top" src={result.imagen} alt={result.nombre} />
