@@ -5,23 +5,22 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import "../styles/ListaProducto.css"
 const ListaProductos = () => {
     const token = localStorage.getItem("token");
     const [data, setData] = useState([]);
     
     const handleProducto = async () => {
-        console.log(data)
+        console.log(token)
         await axios
             .get("http://89.116.25.43:3500/api/productos/listar", {
                 headers: {Authorization: `bearer ${token}`},
             })
             .then((resp) =>{
                 console.log(resp);
-                if (resp.data && resp.data.productos) {
-                    setData(resp.data.productos);
-                } else {
-                    setData([]); // Asigna un array vacío en caso de que no haya datos válidos.
-                }
+                if (resp.data && resp.data.result) {
+                    setData(resp.data.result);
+                } 
             })
             .catch((err) => {
                 console.log(err);
@@ -37,25 +36,21 @@ const ListaProductos = () => {
     useEffect(() => {
         handleProducto();
     }, []);
-    return(
-        <Container>
-        <Row>
-          {data.map((item, index) => {
-            return(
-              <Col key={item._id} >
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img variant="top" src={item.imagen} alt={item.nombre} />
-                  <Card.Body>
-                    <Card.Title>{item.nombre}</Card.Title>
-                    <Card.Text>Precio: {item.precio}</Card.Text>
-                    <Card.Text>Valor: ${item.valor}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
+    return(<Container striped bordered hover>
+      <Row>
+        {data.map((result) => (
+          <Col key={result._id}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img className="imgpan" variant="top" src={result.imagen} alt={result.nombre} />
+              <Card.Body>
+                <Card.Title>{result.descripcion}</Card.Title>
+                <Card.Text>Valor: ${result.valor}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
     )
 }
 export default ListaProductos;
