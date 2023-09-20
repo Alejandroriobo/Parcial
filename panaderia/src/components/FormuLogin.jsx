@@ -6,6 +6,7 @@ import Swal from "sweetalert2"
 import icono from '../assets/panadero.png'
 import ButtonLogin from './ButtonLogin'
 import "../styles/Login.css"
+import Constantes from "./Constantes"
 
 const FormuLogin = () => {
     
@@ -17,6 +18,8 @@ const FormuLogin = () => {
         e.preventDefault()
         console.log(": ",usuario)
         console.log("password: ",password)
+
+        const endPoin = Constantes.URL_PANADERIA + "/Login";
 
         const data ={
             usuario: usuario,

@@ -1,0 +1,18 @@
+{
+  "name": "empleados_backen",
+  "version": "1.0.0",
+  "description": "una api de empleados",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "Deiber Riobo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
